@@ -38,8 +38,8 @@ var humans = {
 ~~~~
 
 
-A Property's name can be any string, including the empty string. The quotes around a property's name in an object literal are optional if the name would be a legal JavaScript ame and not a reserved word. So quotes are required around "first-name", but are optional around first-name. Commas are used to seperate the pairs.
-`
+A Property's name can be any string, including the empty string. The quotes around a property's name in an object literal are optional if the name would be a legal JavaScript name and not a reserved word. So quotes are required around "first-name", but are optional around first-name. Commas are used to separate the pairs.
+~~~~
 var flight = {
 	airline: "Oceanic",
 	number:815,
@@ -54,4 +54,4 @@ arrival:{
 	city: "Los Angles"
 }
 };
-`
+~~~~
