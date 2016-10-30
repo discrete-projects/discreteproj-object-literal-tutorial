@@ -1,9 +1,9 @@
 # Modular JS Using Object Literal Pattern
 ## Ground Rules
 1. Self-contained module
-	- All code is broken out into modules that handle specific tasks
+	- All code is sequestered in modules that handle specific tasks
 	- No Global Variables
-	- If a module manages more than one thing it is split up into a different module
+	- Module manage one task, any additional task is split into a different module
 2. Separation of Concerns
 3. DRY Code - Do Not Repeat Yourself
 4. Efficient DOM usage
@@ -12,28 +12,30 @@
 	- All events can be unbound
 
 ## Objective
-We will create a very basic app that adds and removes names to a list. The app is going to be dumb and have no db but that's ok because right now we just want to focus on how we organize code using the Object Literal Pattern.
+We will create a basic app that adds and removes names to a list. Using this assignment we will primarily focus on code organization using the Object Literal Pattern.
 
 ## Object Literal Pattern
 Object Literals provide a very convenient notation for the creation of new object values. An object literal is a pair of curly braces surround by zero or more name/value pairs. An object literal can appear anywhere an expression can appear:
 
-`var empty_object=();<br/><br/>
+~~~~
+var empty_object=();<br/><br/>
 
 var stooge = {<br/>
 	"first-name": "Jerome",<br/>
 	"last-name": "Howard"<br/>
 };
-`
+~~~~
 
 You can also create a Method or a function nested within an Object Literal:
-` var humans = {<br/>
+~~~~
+var humans = {<br/>
 	name: 'Anthony',<br/>
 	age: 30,<br/>
 	sayName: function(){<br/>
 	alert(this.name);<br/>
 }
 };
-
+~~~~
 
 
 A Property's name can be any string, including the empty string. The quotes around a property's name in an object literal are optional if the name would be a legal JavaScript ame and not a reserved word. So quotes are required around "first-name", but are optional around first-name. Commas are used to seperate the pairs.
