@@ -18,22 +18,22 @@ We will create a basic app that adds and removes names to a list. Using this ass
 Object Literals provide a very convenient notation for the creation of new object values. An object literal is a pair of curly braces surround by zero or more name/value pairs. An object literal can appear anywhere an expression can appear:
 
 ~~~~
-var empty_object=();<br/><br/>
+var empty_object=();
 
-var stooge = {<br/>
-	"first-name": "Jerome",<br/>
-	"last-name": "Howard"<br/>
+var stooge = {
+	"first-name": "Jerome",
+	"last-name": "Howard"
 };
 ~~~~
 
 You can also create a Method or a function nested within an Object Literal:
 ~~~~
-var humans = {<br/>
-	name: 'Anthony',<br/>
-	age: 30,<br/>
-	sayName: function(){<br/>
-	alert(this.name);<br/>
-}
+var humans = {
+	name: 'Anthony',
+	age: 30,
+	sayName: function(){
+		alert(this.name);
+	}
 };
 ~~~~
 
