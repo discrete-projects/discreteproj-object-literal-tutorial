@@ -17,7 +17,7 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
@@ -26,28 +26,41 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+
     <div class="container">
-      
+      <div class="hero-unit"></div>
       <div class="jumbotron">
         <h1>JS MODULE PATTERN</h1>
       </div>
 
       <div class="row marketing">
         <div class="col-lg-6">
-
-          <form>
-            <label>
+           <div id="peopleModule">
+             <section id="peopleForm">
+            <label for="peopleModule">
               Enter Name
-               <input type="text" id="peopleModule" name="Enter Name" placeholder="Enter Name"/>
-            </label>
-            <button id="add-person">Add Person</button>
-          <form>
+           </label>
+               <input class="form-control" type="text" id="peopleModule" name="Enter Name" placeholder="Enter Name"/>
+            <button class="btn btn-primary pull-right" id="addPerson">Add Person</button>
+          </section>
+
+            <section id="results">
+            <h1>People</h1>
+            <ul class="people">
+            <script id="people-template" type="text/template">
+              {{#people}}
+              <li>
+                <span>{{.}}</span>
+                <i class="del">x</i>
+              </li>
+              {{/people}}
+            </script></ul>
+          </section>
         </div>
       </div>
-
     </div>
-    
+  </div>
+
 
 
     <!-- build:js scripts/vendor.js -->
@@ -57,7 +70,7 @@
     <script src="/bower_components/mustache.js/mustache.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -72,7 +85,7 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
-    
+
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

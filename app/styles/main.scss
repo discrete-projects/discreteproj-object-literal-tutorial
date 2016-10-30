@@ -1,37 +1,56 @@
 $icon-font-path: '../fonts/';
-
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // endbower
+
+// color variables here
+$mygray: #f7f7f9;
 
 .browserupgrade {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
   padding: 0.2em 0;
+  color: #000;
+  background: $mygray;
 }
-
 /* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.jumbotron{
-  background-color:#F8E033;
-}
-#peopleModule{
-display:block;
-  
+.jumbotron {
+  background-color: #F8E033;
 }
 
+#peopleModule {
+  display: block;
+  margin: 0 0 20px 0;
+  .people {
+    padding: 20px 0 0 0;
+    li {
+      display: block;
+      clear: both;
+      padding: 5px 5px 5px 0;
+      &:nth-child(even){
+        background: $mygray;
+      }
+      .del {
+        float: right;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+#addPerson {
+  display: block;
+}
 
-
+#peopleForm{
+  margin-bottom: 40px;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
-
-
 }
